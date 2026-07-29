@@ -1,0 +1,11 @@
+{
+  "name": "broken-caesar-machine",
+  "version": "1.0.0",
+  "description": "Oxford Institute of Historical Cryptanalysis - The Broken Caesar Machine",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artifact OX-1938-C4 // The Broken Caesar Machine | Oxford Institute of Historical Cryptanalysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Institutional Bar -->
+  <header class="inst-header">
+    <div class="header-container">
+      <div class="inst-brand">
+        <div class="inst-logo-shield">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="4" fill="#1b365d"/>
+            <path d="M18 6L8 11V18C8 24.5 12.3 30.5 18 32C23.7 30.5 28 24.5 28 18V11L18 6Z" stroke="#d4af37" stroke-width="2" fill="none"/>
+            <path d="M14 17H22M18 13V23" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="inst-titles">
+          <span class="inst-name">OXFORD INSTITUTE OF HISTORICAL CRYPTANALYSIS</span>
+          <span class="inst-sub">Department of Archaeological Epigraphy &amp; Military Signals</span>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="meta-tag"><strong class="tag-label">CATALOG:</strong> OX-1938-C4</span>
+        <span class="meta-tag status-restoration"><span class="status-dot"></span> RESTORATION PHASE II</span>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#briefing" class="nav-item active"><span class="nav-num">01.</span> Briefing</a></li>
+          <li><a href="#specimen" class="nav-item"><span class="nav-num">02.</span> Machine Specimen</a></li>
+          <li><a href="#transmission" class="nav-item"><span class="nav-num">03.</span> Transmission Viewer</a></li>
+          <li><a href="#journal" class="nav-item"><span class="nav-num">04.</span> Research Notes</a></li>
+          <li><a href="#hints" class="nav-item"><span class="nav-num">05.</span> Research Guidance</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="data/encrypted_transmission.txt" download="encrypted_transmission_OX1938C4.txt" class="btn btn-primary" id="downloadTopBtn">
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download Raw Transmission
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- Document Header & Catalog Tag -->
+    <div class="archival-banner">
+      <div class="banner-stamp">ARCHIVAL RECORD</div>
+      <div class="banner-content">
+        <h1 class="document-title">The Broken Caesar Machine</h1>
+        <p class="document-subtitle">Analysis &amp; Cryptanalytic Recovery of Survived Transmission Stream 884-B</p>
+      </div>
+      <div class="banner-dates">
+        <div><strong>Discovered:</strong> Nov 4, 1938</div>
+        <div><strong>Site:</strong> Levant Sector IV Excavation</div>
+        <div><strong>Access level:</strong> Open Academic Inquiry</div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: MISSION BRIEFING -->
+    <section id="briefing" class="section-card">
+      <div class="card-header">
+        <div class="card-header-title">
+          <span class="sec-number">SECTION 01</span>
+          <h2>Expedition 884-B // Mission Briefing</h2>
+        </div>
+        <span class="badge badge-neutral">CLASSIFIED FILE 1938-B</span>
+      </div>
+      <div class="card-body grid-2col">
+        <div class="prose">
+          <p class="lead">
+            In late autumn of 1938, an archaeological team dispatched by the Oxford Antiquities Board un-earthed a reinforced field bunker in Syrian Sector IV. Inside, preserved within an airtight lead-lined container, researchers recovered a rare mechanical cryptographic rotor device cataloged as <strong>Artifact OX-1938-C4</strong>.
+          </p>
+          <p>
+            Due to extensive thermal damage to the machine's primary gear assembly, the rotor mechanism remains seized in its original displacement orientation. Only a single encrypted paper tape transmission survived intact inside the internal mechanical drum reader.
+          </p>
+          <div class="callout callout-info">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+            </div>
+            <div class="callout-content">
+              <h4>Analyst Task Objective</h4>
+              <p>
+                Your task is to analyze the recovered transmission stream, determine the structural shift pattern of the seized rotor wheel, and recover the confidential plaintext message—including the primary expedition recovery flag identifier.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="briefing-sidebar">
+          <div class="archival-table-card">
+            <h3>Artifact Metadata Summary</h3>
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <th>Item Classification</th>
+                  <td>Electro-Mechanical Rotor Cipher Device</td>
+                </tr>
+                <tr>
+                  <th>Catalog Identifier</th>
+                  <td>OX-1938-C4</td>
+                </tr>
+                <tr>
+                  <th>Excavation Coordinates</th>
+                  <td>35°42'18"N 38°14'05"E (Sector IV)</td>
+                </tr>
+                <tr>
+                  <th>Cipher Wheel Type</th>
+                  <td>Single 26-Position Static Rotary Disk</td>
+                </tr>
+                <tr>
+                  <th>Preservation State</th>
+                  <td>Seized / Gear Tooth Damaged</td>
+                </tr>
+                <tr>
+                  <th>Surviving Payload</th>
+                  <td>1x Tape Record (342 Characters)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MACHINE SPECIMEN -->
+    <section id="specimen" class="section-card">
+      <div class="card-header">
+        <div class="card-header-title">
+          <span class="sec-number">SECTION 02</span>
+          <h2>Machine Specimen Catalog &amp; Inspection</h2>
+        </div>
+        <span class="badge">SPECIMEN OX-1938-C4</span>
+      </div>
+      <div class="card-body">
+        <div class="specimen-grid">
+          <!-- Photo Container -->
+          <div class="specimen-photo-wrapper">
+            <div class="photo-frame">
+              <img src="assets/caesar_machine.png" alt="Museum archival photograph of Artifact OX-1938-C4" id="machinePhoto" class="specimen-img">
+              <div class="photo-caption">
+                <span>Fig 1.1 — Archival Photograph of Artifact OX-1938-C4 in Oxford Conservation Lab (Scale: 1:2).</span>
+                <button class="btn btn-sm btn-outline" id="zoomPhotoBtn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg> Maximize Image
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specs & Interactive Rotor Dial -->
+          <div class="specimen-analysis">
+            <div class="spec-block">
+              <h3>Mechanical Rotary Disk Diagnostics</h3>
+              <p>
+                Microscopic inspection of the brass cipher disk reveals 26 radial contact pins aligned with an engraved outer alphabet ring. The internal spring ratchet mechanism is frozen.
+              </p>
+            </div>
+
+            <!-- Interactive Rotary Wheel Simulator -->
+            <div class="rotor-dial-widget">
+              <div class="rotor-widget-header">
+                <h4>Rotary Wheel Offset Simulator</h4>
+                <span class="text-muted">Interactive Mechanical Alignment Tool</span>
+              </div>
+              <p class="rotor-instructions">
+                Use the adjustment wheel to inspect monoalphabetic positional shifts. Rotate to compare outer alphabet pins (Ciphertext) against inner alphabet ring (Plaintext).
+              </p>
+              
+              <div class="rotor-controls">
+                <label for="shiftSlider"><strong>Rotor Position Shift (\(k\)):</strong></label>
+                <input type="range" id="shiftSlider" min="0" max="25" value="0" class="slider-control">
+                <span id="shiftValDisplay" class="shift-badge">Shift +0</span>
+                <button id="resetRotorBtn" class="btn btn-sm btn-secondary">Reset Rotor</button>
+              </div>
+
+              <!-- Interactive Visual Wheel -->
+              <div class="wheel-container">
+                <div class="wheel-svg-wrapper">
+                  <svg id="rotorSvg" viewBox="0 0 300 300" width="280" height="280">
+                    <!-- Outer Ring -->
+                    <circle cx="150" cy="150" r="135" fill="#f4ede2" stroke="#8c6d3b" stroke-width="3"/>
+                    <circle cx="150" cy="150" r="105" fill="#1b365d" stroke="#1b365d" stroke-width="2"/>
+                    <!-- Inner Ring -->
+                    <circle cx="150" cy="150" r="75" fill="#fcf9f2" stroke="#8c6d3b" stroke-width="2"/>
+                    <circle cx="150" cy="150" r="20" fill="#8c6d3b"/>
+                    
+                    <g id="outerAlphabetGroup"></g>
+                    <g id="innerAlphabetGroup" transform="rotate(0 150 150)"></g>
+                  </svg>
+                </div>
+                <div class="wheel-legend">
+                  <div><span class="legend-dot outer-dot"></span> Outer Ring: Ciphertext (Seized Pin Disc)</div>
+                  <div><span class="legend-dot inner-dot"></span> Inner Ring: Target Plaintext</div>
+                  <div class="wheel-sample-mapping">
+                    Current Sample Alignment: <span id="sampleMappingText" class="mono-text">A &rarr; A, B &rarr; B, C &rarr; C</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TRANSMISSION VIEWER -->
+    <section id="transmission" class="section-card">
+      <div class="card-header">
+        <div class="card-header-title">
+          <span class="sec-number">SECTION 03</span>
+          <h2>Surviving Encrypted Transmission Viewer</h2>
+        </div>
+        <div class="header-controls">
+          <div class="btn-group" role="tablist">
+            <button class="btn-tab active" id="tabTextBtn">Text View</button>
+            <button class="btn-tab" id="tabHexBtn">Hexadecimal Dump</button>
+            <button class="btn-tab" id="tabFreqBtn">Frequency Analysis</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+
+        <!-- Toolbar -->
+        <div class="transmission-toolbar">
+          <div class="tool-info">
+            <span><strong>Record Source:</strong> Internal Paper Tape Reel #884-B</span>
+            <span class="divider">|</span>
+            <span><strong>Length:</strong> 342 Characters</span>
+            <span class="divider">|</span>
+            <span><strong>Encoding:</strong> ASCII / Monospace Standard</span>
+          </div>
+          <div class="tool-buttons">
+            <button id="copyCipherBtn" class="btn btn-sm btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg> Copy Ciphertext
+            </button>
+            <a href="data/encrypted_transmission.txt" download="encrypted_transmission_OX1938C4.txt" class="btn btn-sm btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg> Download .TXT File
+            </a>
+          </div>
+        </div>
+
+        <!-- Text View Pane -->
+        <div id="paneText" class="view-pane active">
+          <div class="code-editor-box">
+            <div class="line-numbers" id="lineNumbers"></div>
+            <pre class="cipher-display-area" id="cipherTextDisplay">
+GSQFSH OFQVWJOZ HFOBGAWGGWCB // SLDSRWHWCB 884-P // 1938-11-04
+QZOGGWTWQOHWCB: QCBTWRSBHWOZ AIGSIA FSGHCFOHWCB ZCU
+CFWUWB: GSQHCF 4 SLQOJOHWCB GWHS, GMFWO / OBOHCZWO PCFRSF
+FSQWDWSBH: RSDH CT OBHWEIWHWSG, CLTCFR FSGSOFQV ZOPCFOHCFM
+
+TWSZR FSQCJSFM RWGDOHQV:
+ASQVOBWQOZ FCHCF OGGSAPZM FSGHCFSR HC TIBQHWCBOZ GHOHS CB BCJSAPSF 3FR.
+KS VOJS SLHFOQHSR HVS TWBOZ ZCUUSR HFOBGAWGGWCB TFCA HVS WBHSFBOZ FCZZSF RFIA.
+DFWAOFM FSQCJSFM TZOU WRSBHWTWSF: TZOU{fchofm_qosgof_qwdvsf_slqojohsr_1938}
+
+FSAOWBWBU RWGDOHQV ROHO:
+GIDDZWSG FIBBWBU ZCK OH RIUCIH GSQHCF P. FCHCF USOF 3 GVCKG GWUBG CT KSOF CB GVWTH HCCHV.
+TIFHVSF FSGHCFOHWCB FSEIWFSG DFSQWGWCB ASHFWQ QOZWDSFG.
+            </pre>
+          </div>
+        </div>
+
+        <!-- Hex Dump View Pane -->
+        <div id="paneHex" class="view-pane">
+          <div class="hex-editor-box">
+            <pre class="hex-display-area" id="hexDisplayArea"></pre>
+          </div>
+        </div>
+
+        <!-- Frequency Analysis View Pane -->
+        <div id="paneFreq" class="view-pane">
+          <div class="freq-analysis-container">
+            <div class="freq-intro">
+              <h3>Letter Distribution Chart (Surviving Transmission Stream)</h3>
+              <p>
+                Histogram of alphabetic occurrences within the ciphertext compared against standard written English distribution metrics. Note the shifted frequency peaks.
+              </p>
+            </div>
+            
+            <div class="freq-chart-legend">
+              <span class="legend-item"><span class="legend-box box-cipher"></span> Ciphertext Occurrence Count</span>
+              <span class="legend-item"><span class="legend-box box-english"></span> Standard English Reference Frequency (E=12.7%, T=9.1%, A=8.2%)</span>
+            </div>
+
+            <div class="freq-bars-wrapper" id="freqBarsWrapper">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: RESEARCH NOTES -->
+    <section id="journal" class="section-card">
+      <div class="card-header">
+        <div class="card-header-title">
+          <span class="sec-number">SECTION 04</span>
+          <h2>Laboratory Journal &amp; Conservation Notes</h2>
+        </div>
+        <span class="badge badge-journal">OXFORD ARCHIVES</span>
+      </div>
+      <div class="card-body">
+        <div class="journal-entries">
+
+          <article class="journal-entry">
+            <div class="entry-meta">
+              <span class="entry-date">NOVEMBER 4, 1938</span>
+              <span class="entry-author">Dr. Aris Thorne, Lead Epigraphist</span>
+              <span class="entry-loc">Oxford Conservation Lab 3</span>
+            </div>
+            <h3 class="entry-title">Entry I: Initial Physical Assessment of Seized Mechanism</h3>
+            <p>
+              The device was delivered to the department this morning wrapped in waxed linen. Upon opening the outer steel casing, we observed heavy scoring on the primary bronze driving gear.
+            </p>
+            <p>
+              Unlike complex polyalphabetic machines utilizing stepped rotor stepping levers (such as the Commercial Enigma or Hebern devices), this earlier design utilizes a single static rotary wheel disc with 26 fixed contact pins. The rotor disc is seized firmly against its indexing detent. Consequently, every character typed on the transmitter was shifted by a constant integer offset \(k\) along the standard alphabet sequence \(\text{A-Z}\).
+            </p>
+          </article>
+
+          <article class="journal-entry">
+            <div class="entry-meta">
+              <span class="entry-date">NOVEMBER 12, 1938</span>
+              <span class="entry-author">E. Vance, Conservation Technician</span>
+              <span class="entry-loc">Metallurgy &amp; Cryptanalysis Vault</span>
+            </div>
+            <h3 class="entry-title">Entry II: Frequency &amp; Structural Observations</h3>
+            <p>
+              We executed a complete character count of the tape paper reel. The letter <strong>'S'</strong> appears with disproportionate frequency (38 occurrences), followed closely by <strong>'C'</strong> and <strong>'O'</strong>. In typical military dispatches written in English, the letter <strong>'E'</strong> is statistically the most frequent letter.
+            </p>
+            <p>
+              Furthermore, examining line 8 of the dispatch reveals a structured string formatted as <code>TZOU{...}</code>. Historical protocol dictates that expedition flag identifiers were prefixed with the standard token <code>FLAG{...}</code>. Comparing the positions of <strong>'T'</strong>, <strong>'Z'</strong>, <strong>'O'</strong>, <strong>'U'</strong> against <strong>'F'</strong>, <strong>'L'</strong>, <strong>'A'</strong>, <strong>'G'</strong> should immediately reveal the exact mechanical displacement step of the seized wheel.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RESEARCH GUIDANCE / HINTS -->
+    <section id="hints" class="section-card">
+      <div class="card-header">
+        <div class="card-header-title">
+          <span class="sec-number">SECTION 05</span>
+          <h2>Cryptanalyst Field Guidance (Optional Notes)</h2>
+        </div>
+        <span class="badge badge-accent">REFERENCE ACCORDION</span>
+      </div>
+      <div class="card-body">
+        <p class="accordion-intro">
+          The following reference notes provide theoretical cryptanalysis methodologies for junior researchers analyzing static rotary substitution ciphers.
+        </p>
+
+        <div class="accordion-group">
+
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span class="acc-num">NOTE A.1</span>
+              <span class="acc-title">Frequency Analysis on Monoalphabetic Substitution Ciphers</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="accordion-content prose">
+              <p>
+                In a standard Caesar shift cipher, every letter in the alphabet is shifted by a constant distance \(k\). Because the relative ordering of letter frequencies is preserved under a uniform shift, the frequency distribution histogram retains its characteristic shape but is translated horizontally by \(k\) positions.
+              </p>
+              <p>
+                By identifying the most frequent ciphertext letter (e.g. <strong>S</strong>) and mapping it to the expected English high-frequency letter <strong>E</strong>, one can calculate candidate shift values:
+              </p>
+              <p class="mono-callout">
+                \(\text{Shift } k = (\text{ord}(\text{Ciphertext}) - \text{ord}(\text{Plaintext})) \pmod{26}\)
+              </p>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span class="acc-num">NOTE A.2</span>
+              <span class="acc-title">Known-Plaintext Attack using Known Format Headers</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="accordion-content prose">
+              <p>
+                When a transmission contains standardized header keywords or flag formats (e.g. <code>FLAG{...}</code> or <code>SECRET</code>), a known-plaintext attack provides an instant solution:
+              </p>
+              <ul>
+                <li>Compare <code>TZOU</code> (Ciphertext) to <code>FLAG</code> (Target Plaintext).</li>
+                <li>Calculate distance: <code>T</code> \(\rightarrow\) <code>F</code> (Shifted by 14 positions forward in alphabet cycle).</li>
+                <li>Verify across remaining letters: <code>Z</code> \(\rightarrow\) <code>L</code> (+14), <code>O</code> \(\rightarrow\) <code>A</code> (+14), <code>U</code> \(\rightarrow\) <code>G</code> (+14).</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span class="acc-num">NOTE A.3</span>
+              <span class="acc-title">Python Offline Decryption Template</span>
+              <svg class="acc-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="accordion-content prose">
+              <p>Researchers wishing to solve the transmission using Python or bash may download the raw text file and run the following script:</p>
+              <pre class="code-snippet"><code>def decrypt_caesar(ciphertext, shift):
+    plaintext = []
+    for char in ciphertext:
+        if 'A' &lt;= char &lt;= 'Z':
+            plaintext.append(chr((ord(char) - ord('A') - shift) % 26 + ord('A')))
+        elif 'a' &lt;= char &lt;= 'z':
+            plaintext.append(chr((ord(char) - ord('a') - shift) % 26 + ord('a')))
+        else:
+            plaintext.append(char)
+    return ''.join(plaintext)
+
+# Try shifts 0 through 25 to recover the dispatch
+with open('encrypted_transmission_OX1938C4.txt') as f:
+    ct = f.read()
+    for s in range(26):
+        print(f"=== SHIFT {s} ===")
+        print(decrypt_caesar(ct[:120], s))</code></pre>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo Lightbox Modal -->
+  <div id="photoModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Specimen OX-1938-C4 — Archival Detail Inspection</h3>
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/caesar_machine.png" alt="High resolution inspection" class="modal-img">
+        <div class="modal-caption">
+          Photograph recorded under monochromatic laboratory lighting. Note the engraved dial rotational markings and brass detent gear tooth at index 14.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Ciphertext copied to clipboard.</div>
+
+  <!-- Footer -->
+  <footer class="inst-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-title">OXFORD INSTITUTE OF HISTORICAL CRYPTANALYSIS</span>
+        <p>Curated by the Department of Archaeological Epigraphy &amp; Military Signals, 1938 Archives Collection.</p>
+      </div>
+      <div class="footer-meta">
+        <div>Artifact OX-1938-C4 / Cataloging Status: OPEN</div>
+        <div>All evidence files preserved under Public Research License.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
