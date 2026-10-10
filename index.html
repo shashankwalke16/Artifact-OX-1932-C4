@@ -277,7 +277,7 @@ FSQWDWSBH: RSDH CT OBHWEIWHWSG, CLTCFR FSGSOFQV ZOPCFOHCFM
 TWSZR FSQCJSFM RWGDOHQV:
 ASQVOBWQOZ FCHCF OGGSAPZM FSGHCFSR HC TIBQHWCBOZ GHOHS CB BCJSAPSF 3FR.
 KS VOJS SLHFOQHSR HVS TWBOZ ZCUUSR HFOBGAWGGWCB TFCA HVS WBHSFBOZ FCZZSF RFIA.
-DFWAOFM FSQCJSFM TZOU WRSBHWTWSF: TZOU{fchofm_qosgof_qwdvsf_slqojohsr_1938}
+DFWAOFM FSQCJSFM TZOU WRSBHWTWSF: wbfccaqht{FCHOFM_QOSGOF_QWDVSF_SLQOJOHSR_1938}
 
 FSAOWBWBU RWGDOHQV ROHO:
 GIDDZWSG FIBBWBU ZCK OH RIUCIH GSQHCF P. FCHCF USOF 3 GVCKG GWUBG CT KSOF CB GVWTH HCCHV.
@@ -355,7 +355,7 @@ TIFHVSF FSGHCFOHWCB FSEIWFSG DFSQWGWCB ASHFWQ QOZWDSFG.
               We executed a complete character count of the tape paper reel. The letter <strong>'S'</strong> appears with disproportionate frequency (38 occurrences), followed closely by <strong>'C'</strong> and <strong>'O'</strong>. In typical military dispatches written in English, the letter <strong>'E'</strong> is statistically the most frequent letter.
             </p>
             <p>
-              Furthermore, examining line 8 of the dispatch reveals a structured string formatted as <code>TZOU{...}</code>. Historical protocol dictates that expedition flag identifiers were prefixed with the standard token <code>FLAG{...}</code>. Comparing the positions of <strong>'T'</strong>, <strong>'Z'</strong>, <strong>'O'</strong>, <strong>'U'</strong> against <strong>'F'</strong>, <strong>'L'</strong>, <strong>'A'</strong>, <strong>'G'</strong> should immediately reveal the exact mechanical displacement step of the seized wheel.
+              Furthermore, examining line 8 of the dispatch reveals a structured string formatted as <code>wbfccaqht{...}</code>. Historical protocol dictates that expedition flag identifiers were prefixed with the standard token <code>inroomctf{...}</code>. Comparing the positions of <strong>'w'</strong>, <strong>'b'</strong>, <strong>'f'</strong>, <strong>'c'</strong>, <strong>'c'</strong>, <strong>'a'</strong>, <strong>'q'</strong>, <strong>'h'</strong>, <strong>'t'</strong> against <strong>'i'</strong>, <strong>'n'</strong>, <strong>'r'</strong>, <strong>'o'</strong>, <strong>'o'</strong>, <strong>'m'</strong>, <strong>'c'</strong>, <strong>'t'</strong>, <strong>'f'</strong> should immediately reveal the exact mechanical displacement step of the seized wheel.
             </p>
           </article>
 
@@ -410,12 +410,12 @@ TIFHVSF FSGHCFOHWCB FSEIWFSG DFSQWGWCB ASHFWQ QOZWDSFG.
             </summary>
             <div class="accordion-content prose">
               <p>
-                When a transmission contains standardized header keywords or flag formats (e.g. <code>FLAG{...}</code> or <code>SECRET</code>), a known-plaintext attack provides an instant solution:
+                When a transmission contains standardized header keywords or flag formats (e.g. <code>inroomctf{...}</code> or <code>SECRET</code>), a known-plaintext attack provides an instant solution:
               </p>
               <ul>
-                <li>Compare <code>TZOU</code> (Ciphertext) to <code>FLAG</code> (Target Plaintext).</li>
-                <li>Calculate distance: <code>T</code> \(\rightarrow\) <code>F</code> (Shifted by 14 positions forward in alphabet cycle).</li>
-                <li>Verify across remaining letters: <code>Z</code> \(\rightarrow\) <code>L</code> (+14), <code>O</code> \(\rightarrow\) <code>A</code> (+14), <code>U</code> \(\rightarrow\) <code>G</code> (+14).</li>
+                <li>Compare <code>wbfccaqht</code> (Ciphertext) to <code>inroomctf</code> (Target Plaintext).</li>
+                <li>Calculate distance: <code>w</code> \(\rightarrow\) <code>i</code> (Shifted by 14 positions forward in alphabet cycle).</li>
+                <li>Verify across remaining letters: <code>b</code> \(\rightarrow\) <code>n</code> (+14), <code>f</code> \(\rightarrow\) <code>r</code> (+14), <code>c</code> \(\rightarrow\) <code>o</code> (+14), <code>a</code> \(\rightarrow\) <code>m</code> (+14), <code>q</code> \(\rightarrow\) <code>c</code> (+14), <code>h</code> \(\rightarrow\) <code>t</code> (+14), <code>t</code> \(\rightarrow\) <code>f</code> (+14).</li>
               </ul>
             </div>
           </details>
